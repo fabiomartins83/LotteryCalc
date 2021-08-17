@@ -61,6 +61,7 @@ def outro():
 
 sair = False
 while (sair == False):
+    os.system("clear")
     print("CALCULADORA LOTERICA\n")
     print("1 - Megasena")
     print("2 - Quina")
@@ -70,13 +71,12 @@ while (sair == False):
         "2": quina,
         "3": lotofacil
     }
-    jogo = "não definido"
+    jogo = "jogo não definido"
     case = switch.get(input("\nDigite uma opcao (1, 2 ou 3): "), outro)
-    os.system("clear")
     case()
     n3 = n1+1
     while ((n3 > n1) | (n3 <= n4) | (n3 == "")):
-        n3 = int(input("Insira a quantidade de dezenas apostadas: "))
+        n3 = int(input("\nInsira a quantidade de dezenas apostadas: "))
     print("\nCalculando probabilidade para ",jogo)
     print("Sorteio de",int(n2),"dezenas de 01 a",int(n1),":")
     for j in range(n2,n3+1,1):
