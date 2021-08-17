@@ -26,28 +26,28 @@ def coeficiente(n1,n2,n3,n4):
     result = coef1*coef2
     return result
 
-def opcao1():
+def megasena():
     global jogo, n1, n2, n4
     jogo = "MEGASENA"
     n1 = int(60)
     n2 = int(6)
     n4 = int(4)
     
-def opcao2():
+def quina():
     global jogo, n1, n2, n4
     jogo = "QUINA"
     n1 = int(80)
     n2 = int(5)
     n4 = int(2)
     
-def opcao3():
+def lotofacil():
     global jogo, n1, n2, n4
     jogo = "LOTOFACIL"
     n1 = int(25)
     n2 = int(15)
     n4 = int(12)
     
-def default():
+def outro():
     global n1, n2, n4
     n1 = 0
     while ((n1 <= 0) | (n1 == "")):
@@ -66,12 +66,12 @@ while (sair == False):
     print("2 - Quina")
     print("3 - Lotofácil")
     switch = {
-        "1": opcao1,
-        "2": opcao2,
-        "3": opcao3
+        "1": megasena,
+        "2": quina,
+        "3": lotofacil
     }
     jogo = "não definido"
-    case = switch.get(input("\nDigite uma opcao (1, 2 ou 3): "), default)
+    case = switch.get(input("\nDigite uma opcao (1, 2 ou 3): "), outro)
     os.system("clear")
     case()
     n3 = n1+1
